@@ -2,11 +2,11 @@ import Component from '@ember/component';
 
 
 function binaryGap(num) {
-    var bin = Math.abs(num).toString(2),
-        finalMax = 0,
-        currentMax;
+    let bin = Math.abs(num).toString(2);
+    let finalMax = 0;
+    let currentMax;
 
-    for (var i = 0; i < bin.length; i++) {
+    for (let i = 0; i < bin.length; i++) {
         currentMax = 0;
         while (bin[i] === "0") {
             ++currentMax && ++i;
@@ -17,7 +17,7 @@ function binaryGap(num) {
 }
 
 export default Component.extend({
-    
+
     init() {
         this._super(...arguments);
         this.set("result", 0);
